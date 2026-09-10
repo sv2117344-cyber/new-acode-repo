@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handia Poly. Handia Prayagraj</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* शीर्ष हेडर */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #f4f6f9;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .logo-box {
+            width: 70px;
+            height: 70px;
+            border: 2px dashed #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003366;
+            margin-right: 20px;
+        }
+
+        .college-title {
+            font-size: 24px;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        /* नेविगेशन बार */
+        nav {
+            background-color: #003366;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 14px 18px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.3s;
+        }
+
+        .nav-item a:hover {
+            background-color: #00509e;
+        }
+
+        /* प्रथम स्तर ड्रॉपडाउन (Department के अंदर) */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 170px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            color: #333333;
+            border-right: none;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+            color: #003366;
+        }
+
+        .nav-item:hover > .dropdown {
+            display: block;
+        }
+
+        /* द्वितीय स्तर ड्रॉपडाउन (सब-मेन्यू) */
+        .has-submenu {
+            position: relative;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #ffffff;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .has-submenu:hover > .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- हेडर (Logo + Name) -->
+    <header>
+        <div class="logo-box">Logo</div>
+        <h1 class="college-title">Handia Poly. Handia Prayagraj</h1>
+    </header>
+
+    <!-- नेविगेशन मेन्यू -->
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#">About us</a></li>
+            
+            <!-- Department मेन्यू और सब-मेन्यू -->
+            <li class="nav-item">
+                <a href="#">Department ▾</a>
+                <ul class="dropdown">
+                    <li class="has-submenu">
+                        <a href="#">Teacher ▸</a>
+                        <ul class="submenu">
+                            <li><a href="#">Civil</a></li>
+                            <li><a href="#">Mech</a></li>
+                            <li><a href="#">Electrical</a></li>
+                            <li><a href="#">Ag, IT, Electronics</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Student ▸</a>
+                        <ul class="submenu">
+                            <li><a href="#">Civil</a></li>
+                            <li><a href="#">Mech</a></li>
+                            <li><a href="#">Electrical</a></li>
+                            <li><a href="#">Ag, IT, Electronics</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="#">Facility</a></li>
+            <li class="nav-item"><a href="#">Library</a></li>
+            <li class="nav-item"><a href="#">Examination</a></li>
+            <li class="nav-item"><a href="#">Result</a></li>
+            <li class="nav-item"><a href="#">Gallery</a></li>
+            <li class="nav-item"><a href="#">Requirement</a></li>
+            <li class="nav-item"><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
